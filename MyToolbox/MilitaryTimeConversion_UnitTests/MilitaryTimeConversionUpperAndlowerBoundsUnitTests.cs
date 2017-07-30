@@ -5,7 +5,7 @@ using MilitaryTimeConversion;
 namespace MilitaryTimeConversion_UnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class MilitaryTimeConversionUpperAndlowerBoundsUnitTests
     {
         [TestMethod]
         public void TestMethod1()
@@ -13,17 +13,19 @@ namespace MilitaryTimeConversion_UnitTests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void Number_Greater_Than_TwentyFourHundred_Throws_IndexOutOfRangeException()
         {
             var converter = new MilitaryTimeConverter();
-            converter.ConvertTime(2400);
+            converter.ConvertTime(24);
         }
 
         [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void Number_Less_Than_Zero_Throws_IndexOutOfRangeException()
         {
             var converter = new MilitaryTimeConverter();
-            converter.ConvertTime(-0001);
+            converter.ConvertTime(-1);
         }
     }
 }

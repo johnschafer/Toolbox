@@ -12,9 +12,13 @@ namespace MilitaryTimeConversion
         {
 
         }
+
         public void ConvertTime(int p)
         {
-            throw new NotImplementedException();
+            if(p < 0 || p > 23)
+            {
+                throw new IndexOutOfRangeException("Not a valid time, please enter a valid time between 0 and 23.");
+            }
         }
     }
 }
