@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="AppointSetterForm.aspx.cs">
       <DependentUpon>AppointSetterForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AppointSetterForm.aspx.designer.cs">
       <DependentUpon>AppointSetterForm.aspx</DependentUpon>
