@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>React Sandbox</title>
+</head>
+<body>
+    <div><h1>Hello, in an effort to learn more about front end development I will be doing some React examples using this sandbox.</h1></div>
+    <div><h2>The following examples were taking from the following tutorial guide: <a href="https://medium.com/learning-new-stuff/learn-react-js-in-7-min-92a1ef023003">Link</a></h2></div>
+    <p>This is just a simple hello world example.</p><div id="helloWorld"></div>
+    <p>Components are the basic building blocks of React. The ability to nest these blocks is demonstrated here by having a button nested inside of an app.</p><p>Note: Interesting discovery i noticed is that camel casing does not work. For example in the line "var ButtonForm = " i attempted to use "var buttonForm = " which broke the app. Do more research on why this happened!</p><div id="buttonExample"></div>
+    <p>There are two methods of data in React one is Props and the other is state. This example will focus on Props which are pieces of data that are external to the component (thus not controlled by it) but can be passed to it.</p><div id="propsExample"></div>
+    <!--This is where you would load the libraries. This method involves loading the libraries through a CDN which i can image would be the prefered method.-->
+    <script src="https://fb.me/react-with-addons-0.13.3.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+    <script type="text/jsx">
+        React.render(
+        <h1>Hello, World!</h1>, document.getElementById('helloWorld'));
+    </script>
+    <script type="text/jsx">
+        var ButtonForm = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <h3>Click button</h3>
+                        <input type="submit" />
+                    </div>
+                );
+            }
+        });
+
+        var App = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <h1>Welcome to my button app example.</h1>
+                        <ButtonForm />
+                    </div>
+                );
+            }
+        });
+
+        React.render(<App />, document.getElementById("buttonExample"));
+    </script>
+    <script type="text/jsx">
+        var ButtonText = "Click on the props button";
+
+        var ButtonForm = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <h3>{this.props.text}</h3>
+                        <input type="submit" />
+                    </div>
+                );
+            }
+        });
+
+        var App = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <h1>Welcome to my props button app.</h1>
+                        <ButtonForm text={this.props.text} />
+                    </div>
+                );
+            }
+        });
+
+        React.render(<App text={ButtonText} />, document.getElementById("propsExample"));
+    </script>
+</body>
+</html>
