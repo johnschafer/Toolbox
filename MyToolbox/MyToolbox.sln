@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryTimeConversion_Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryTimeConversion", "MilitaryTimeConversion\MilitaryTimeConversion.csproj", "{4E556F01-5F66-4377-BBEB-908E4923EBB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentSetter", "..\..\..\..\..\..\Development\AppointmentSetter\AppointmentSetter\AppointmentSetter.csproj", "{8211DBA1-B95C-4676-9D38-1D1B39A13CA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentSetter", "AppointmentSetter\AppointmentSetter.csproj", "{8211DBA1-B95C-4676-9D38-1D1B39A13CA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentSetter.Tests", "..\..\..\..\..\..\Development\AppointmentSetter\AppointmentSetter.Tests\AppointmentSetter.Tests.csproj", "{0AC3E3C4-BF56-4AE3-A58C-1C4905933E11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppointmentSetter.Tests", "AppointmentSetter.Tests\AppointmentSetter.Tests.csproj", "{0AC3E3C4-BF56-4AE3-A58C-1C4905933E11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
